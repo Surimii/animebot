@@ -52,7 +52,7 @@ bot.on('message', message => {
             .setdescription("Poll")
             .addField(thingToEcho, "Answer with :white_check_mark: or :negative_squared_cross_mark:")
             .setColor("0xFF459F")
-            .setTimestamp()
+            .setTimestamp(360)
         message.guild.channels.find("name", "poll").sendEmbed(embed)
         .then(function (message) {
             message.react(":white_check_mark:")
