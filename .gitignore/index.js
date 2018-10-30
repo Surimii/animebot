@@ -30,7 +30,7 @@ bot.on('message', message => {
         .addField("Crée le", message.guild.createAt)
         .addField("Tu as rejoins le", message.member.joinedAt)
         .addField("Utilisateurs sur le discord", message.guild.memberCount)
-        .setColor("0x0000FF")
+        .setColor("0xFF459F")
     message.channel.sendEmbed(embed)
     }
     
