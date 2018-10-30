@@ -12,7 +12,7 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
-        message.channel.sendMessage("Commands list: \n _help \n waifu \n Who are you? \n _info");
+        message.channel.sendMessage("Commands list: \n _help \n waifu \n Who are you? \n _serverinfo");
     }
 
     if (message.content === "waifu"){
@@ -23,7 +23,7 @@ bot.on('message', message => {
         message.channel.sendMessage("I'm AnimeBot, nice to meet you ! ^^");
     }
     
-    if (message.content === prefix + "info"){
+    if (message.content === prefix + "serverinfo"){
         var embed = new Discord.RichEmbed()
         .setDescription("Server's info")
         .addField("Server's name", message.guild.name)
