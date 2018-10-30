@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("_")
 
 bot.on('ready', function(){
-    bot.user.setGame("with master");
+    bot.user.setGame("with master|_help");
     console.log("Connected");
 });
 
