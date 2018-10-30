@@ -12,7 +12,7 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
-        message.channel.sendMessage("Liste des commandes: \n _help \n waifu \n Who are you? \n _info");
+        message.channel.sendMessage("Commands list: \n _help \n waifu \n Who are you? \n _info");
     }
 
     if (message.content === "waifu"){
@@ -26,10 +26,10 @@ bot.on('message', message => {
     if (message.content === prefix + "info"){
         var embed = new Discord.RichEmbed()
         .setDescription("Information du Discord")
-        .addField("Nom du discord", message.guild.name)
-        .addField("Crée le", message.guild.createAt)
-        .addField("Tu as rejoins le", message.member.joinedAt)
-        .addField("Utilisateurs sur le discord", message.guild.memberCount)
+        .addField("Server's name", message.guild.name)
+        .addField("Create at", message.guild.createAt)
+        .addField("Joined at", message.member.joinedAt)
+        .addField("Users on the server", message.guild.memberCount)
         .setColor("0xFF459F")
     message.channel.sendEmbed(embed)
     }
