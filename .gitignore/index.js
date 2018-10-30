@@ -25,7 +25,7 @@ bot.on('message', message => {
     
     if (message.content === prefix + "info"){
         var embed = new Discord.RichEmbed()
-        .setDescription("Information du Discord")
+        .setDescription("Server's info")
         .addField("Server's name", message.guild.name)
         .setFooter('Server created at:')
         .setTimestamp(message.guild.createdAt)
