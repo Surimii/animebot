@@ -12,7 +12,9 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
-        message.channel.sendMessage("Commands list: \n _help \n waifu \n Who are you? \n _serverinfo");
+        var embed = new Discord.RichEmbed()
+        .addField("Commands list: \n _help \n waifu \n Who are you? \n _serverinfo");
+    message.channel.sendEmbed
     }
 
     if (message.content === "waifu"){
