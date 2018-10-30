@@ -12,7 +12,7 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
-        message.channel.sendMessage("Liste des commandes: \n _help \n waifu \n Who are you?");
+        message.channel.sendMessage("Liste des commandes: \n _help \n waifu \n Who are you? \n _info");
     }
 
     if (message.content === "waifu"){
