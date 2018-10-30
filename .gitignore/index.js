@@ -27,10 +27,12 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Server's info")
         .addField("Server's name", message.guild.name)
+        .addField("Server owner", message.guild.owner)
+        .addField("Server region", message.guild.region)
         .setFooter('Server created at:')
         .setTimestamp(message.guild.createdAt)
         .addField("Joined at", message.member.joinedAt)
-        .addField("Users on the server", message.guild.memberCount)
+        .addField("Users on the server (with bots)", message.guild.memberCount)
         .setColor("0xFF459F")
     message.channel.sendEmbed(embed)
     }
