@@ -13,7 +13,7 @@ bot.login(process.env.TOKEN);
 bot.on('message', message => {
     if (message.content === prefix + "help"){
         var embed = new Discord.RichEmbed()
-        .addField("Commands list: \n _help \n waifu \n Who are you? \n _serverinfo");
+        .addField("Commands list: \n _help \n waifu \n Who are you? \n _serverinfo \n _poll");
     message.channel.sendEmbed
     }
 
