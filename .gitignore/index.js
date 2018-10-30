@@ -37,4 +37,19 @@ bot.on('message', message => {
     message.channel.sendEmbed(embed)
     }
     
+    if (message.content.startWith(prefix + "poll")){
+        let args = message.content.split(" ").slice(1);
+        let thingToEcho = args.join(" ")
+        var embed = new Discord.RichEmbed()
+            .setdescription("Poll")
+            .addField(thingToEcho, "Answer with :white_check_mark: or :negative_squared_cross_mark:")
+            .setColor("0xFF459F")
+            .setTimestamp()
+        message.guild.channels.find("name", "poll").sendEmbed(embed)
+        .then(function (message) {
+            message.react(":white_check_mark:")
+            message.react(":negative_squared_cross_mark:")
+        }).catch(function() {
+        });
+        
 });
